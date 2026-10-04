@@ -25,8 +25,9 @@ abstract class HashTable<AnyType>{
   abstract public long rehashCount();
   abstract public long collisionCount();*/
 
-  protected long rehashCounter = 0;
+  protected long rehashCounter = 0; // compte les rehash
 
+  // elements divises par la taille de la table
   public double loadFactor() {
     return (double) currentSize / tableLength();
   }

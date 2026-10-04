@@ -16,12 +16,13 @@ public class LinearProbingHashTable<AnyType> extends ProbingHashTable<AnyType>{
     protected int findPos(AnyType x) {
         int currentPos = myhash(x);
 
+        // case occupee par un autre element : on avance d'une case
         while (array[currentPos] != null &&
                 !array[currentPos].element.equals(x)) {
             collisionCounter++;
             currentPos++;
             if (currentPos >= array.length) {
-                currentPos = 0;
+                currentPos = 0; // on revient au debut
             }
         }
         return currentPos;
