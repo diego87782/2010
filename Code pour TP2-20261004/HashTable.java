@@ -8,7 +8,7 @@
  */
 import java.util.Scanner;
 abstract class HashTable<AnyType>{
-  public static int MATRICULE = 1; //Remplacer 1 avec votre matricule d'étudiant (7 chiffres)
+  public static int MATRICULE = 2356852; //Remplacer 1 avec votre matricule d'étudiant (7 chiffres)
   protected static final int DEFAULT_TABLE_SIZE = 11;
   protected int currentSize = 0;
   protected long collisionCounter = 0;
